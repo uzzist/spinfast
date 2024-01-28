@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension Space on num {
-  SizedBox get sh => SizedBox(
-        height: ScreenUtil().setHeight(toDouble()),
-      );
+  SizedBox get sbh => SizedBox(
+        height: ScreenUtil().setHeight(toDouble(),
+      ));
 
-  SizedBox get sw => SizedBox(
+  SizedBox get sbw => SizedBox(
         width: ScreenUtil().setWidth(toDouble()),
       );
 }
