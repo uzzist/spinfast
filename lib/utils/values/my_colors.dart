@@ -8,6 +8,8 @@ class MyColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color lightGray = Color(0xFFF9F9F9);
   static const Color mediumGray = Color(0xFF828282);
+  static const Color midnightBlue = Color(0xFF2D3748);
+  static const Color red = Color(0xFFFF0000);
 
   MyColors._();
 }

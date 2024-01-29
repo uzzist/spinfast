@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
           defaultTransition: Transition.rightToLeft,
           theme: ThemeData(
             primaryColor: MyColors.primary,
-            backgroundColor: MyColors.white,
             useMaterial3: true,
           ),
           getPages: [
