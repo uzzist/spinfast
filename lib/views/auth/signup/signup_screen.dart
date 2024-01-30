@@ -38,7 +38,8 @@ class SignUpScreen extends StatelessWidget {
                 Center(
                   child: Text(
                     'Sign up',
-                    style: kSize16DarkW500Text.copyWith(fontWeight: FontWeight.w600),
+                    style: kSize16DarkW500Text.copyWith(
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
                 8.sbh,
@@ -51,75 +52,142 @@ class SignUpScreen extends StatelessWidget {
                 30.sbh,
                 Row(
                   children: [
-                    Expanded(child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('First name', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
-                        8.sbh,
-                        CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter),
-                      ],
-                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'First name',
+                            style: kSize12DarkW500Text.copyWith(
+                                color: MyColors.midnightBlue),
+                          ),
+                          8.sbh,
+                          CustomTextField(
+                            inputFormatters:
+                                FilteringTextInputFormatter.singleLineFormatter,
+                            length: 20,
+                            keyboardType: TextInputType.text,
+                          ),
+                        ],
+                      ),
                     ),
                     16.sbw,
-                    Expanded(child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Last name', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
-                        8.sbh,
-                        CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter),
-                      ],
-                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Last name',
+                            style: kSize12DarkW500Text.copyWith(
+                                color: MyColors.midnightBlue),
+                          ),
+                          8.sbh,
+                          CustomTextField(
+                            inputFormatters:
+                                FilteringTextInputFormatter.singleLineFormatter,
+                            length: 20,
+                            keyboardType: TextInputType.text,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-                Text('Email', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
                 8.sbh,
-                CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter),
-                Text('Password', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
-                8.sbh,
-                CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter, suffixIcon: 1, obscureText: true,),
-                Text('Confirm Password', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
-                8.sbh,
-                CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter, suffixIcon: 1, obscureText: true,),
-                Row(
-                  children: [
-                    Checkbox(value: controller.rememberMe, onChanged: (value) {
-                      controller.rememberMe = value!;
-                      controller.update();
-                    }, side: BorderSide(color: MyColors.black),),
-                    Text('Remember me', style: kSize12DarkW500Text,)
-                  ],
+                Text(
+                  'Email',
+                  style: kSize12DarkW500Text.copyWith(
+                      color: MyColors.midnightBlue),
                 ),
+                8.sbh,
+                CustomTextField(
+                  inputFormatters:
+                      FilteringTextInputFormatter.singleLineFormatter,
+                  length: 50,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                8.sbh,
+                Text(
+                  'Password',
+                  style: kSize12DarkW500Text.copyWith(
+                      color: MyColors.midnightBlue),
+                ),
+                8.sbh,
+                CustomTextField(
+                  inputFormatters:
+                      FilteringTextInputFormatter.singleLineFormatter,
+                  length: 20,
+                  keyboardType: TextInputType.text,
+                  obscureText: true,
+                  showEyeIcon: true,
+                ),
+                8.sbh,
+                Text(
+                  'Confirm Password',
+                  style: kSize12DarkW500Text.copyWith(
+                      color: MyColors.midnightBlue),
+                ),
+                8.sbh,
+                CustomTextField(
+                  inputFormatters:
+                      FilteringTextInputFormatter.singleLineFormatter,
+                  length: 20,
+                  keyboardType: TextInputType.emailAddress,
+                  obscureText: true,
+                  showEyeIcon: true,
+                ),
+                8.sbh,
                 Row(
                   children: [
-                    Checkbox(value: controller.termsAndConditions, onChanged: (value) {
-                      controller.termsAndConditions = value!;
-                      controller.update();
-                    }, side: BorderSide(color: MyColors.black),),
-                    RichText(text: TextSpan(
-                      text: 'I agree to all the ',
+                    Checkbox(
+                      value: controller.rememberMe,
+                      onChanged: (value) {
+                        controller.rememberMe = value!;
+                        controller.update();
+                      },
+                      side: BorderSide(color: MyColors.black),
+                    ),
+                    Text(
+                      'Remember me',
                       style: kSize12DarkW500Text,
-                      children: [
-                        TextSpan(
-                          text: 'Terms',
-                          style: kSize12DarkW500Text.copyWith(color: MyColors.primary)
-                        ),
-                        TextSpan(
-                            text: ' and ',
-                            style: kSize12DarkW500Text
-                        ),
-                        TextSpan(
-                            text: 'privacy policy',
-                            style: kSize12DarkW500Text.copyWith(color: MyColors.primary)
-                        ),
-                      ]
-                    ))
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Checkbox(
+                      value: controller.termsAndConditions,
+                      onChanged: (value) {
+                        controller.termsAndConditions = value!;
+                        controller.update();
+                      },
+                      side: BorderSide(color: MyColors.black),
+                    ),
+                    RichText(
+                        text: TextSpan(
+                            text: 'I agree to all the ',
+                            style: kSize12DarkW500Text,
+                            children: [
+                          TextSpan(
+                              text: 'Terms',
+                              style: kSize12DarkW500Text.copyWith(
+                                  color: MyColors.primary)),
+                          TextSpan(text: ' and ', style: kSize12DarkW500Text),
+                          TextSpan(
+                              text: 'privacy policy',
+                              style: kSize12DarkW500Text.copyWith(
+                                  color: MyColors.primary)),
+                        ]))
                   ],
                 ),
                 40.sbh,
                 Center(child: CustomButton(text: 'Signup', onPressed: () {})),
                 28.sbh,
-                Center(child: Text('Or sign up with social account', style: kSize12DarkW500Text,)),
+                Center(
+                    child: Text(
+                  'Or sign up with social account',
+                  style: kSize12DarkW500Text,
+                )),
                 28.sbh,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -131,17 +199,20 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 28.sbh,
                 Center(
-                  child: RichText(text: TextSpan(
-                      text: 'Don\'t have an account? ',
-                      style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),
-                      children: [
+                  child: RichText(
+                      text: TextSpan(
+                          text: 'Don\'t have an account? ',
+                          style: kSize12DarkW500Text.copyWith(
+                              color: MyColors.midnightBlue),
+                          children: [
                         TextSpan(
                           text: 'Sign up',
-                          style: kSize12DarkW500Text.copyWith(color: MyColors.primary),
-                          recognizer: TapGestureRecognizer()..onTap = () => print('Tap Here onTap'),
+                          style: kSize12DarkW500Text.copyWith(
+                              color: MyColors.primary),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => print('Tap Here onTap'),
                         )
-                      ]
-                  )),
+                      ])),
                 ),
                 40.sbh,
               ],

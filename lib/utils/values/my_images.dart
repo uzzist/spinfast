@@ -6,5 +6,6 @@ class MyImages {
   static const String logo = 'assets/images/logo.png';
   static const String google = 'assets/images/google.png';
   static const String facebook = 'assets/images/facebook.png';
+  static const String tick_square = 'assets/images/tick_square.png';
 
 }

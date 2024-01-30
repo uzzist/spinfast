@@ -7,6 +7,7 @@ import 'package:spinfast/utils/extensions/extensions.dart';
 import 'package:spinfast/utils/values/my_colors.dart';
 import 'package:spinfast/utils/values/my_images.dart';
 import 'package:spinfast/utils/values/styles.dart';
+import 'package:spinfast/views/auth/forgot_password/forgot_password_screen.dart';
 import 'package:spinfast/views/auth/signup/signup_screen.dart';
 import 'package:spinfast/views/widgets/auth/social_login_button.dart';
 import 'package:spinfast/views/widgets/custom_button.dart';
@@ -36,7 +37,8 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: Text(
                   'Sign in',
-                  style: kSize16DarkW500Text.copyWith(fontWeight: FontWeight.w600),
+                  style:
+                      kSize16DarkW500Text.copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
               8.sbh,
@@ -47,22 +49,56 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               30.sbh,
-              Text('Email', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
+              Text(
+                'Email',
+                style:
+                    kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),
+              ),
               8.sbh,
-              CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter),
-              Text('Password', style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),),
+              CustomTextField(
+                inputFormatters:
+                    FilteringTextInputFormatter.singleLineFormatter,
+                length: 50,
+                keyboardType: TextInputType.emailAddress,
+              ),
               8.sbh,
-              CustomTextField(inputFormatters: FilteringTextInputFormatter.singleLineFormatter, suffixIcon: 1, obscureText: true,),
+              Text(
+                'Password',
+                style:
+                    kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),
+              ),
+              8.sbh,
+              CustomTextField(
+                inputFormatters:
+                    FilteringTextInputFormatter.singleLineFormatter,
+                length: 20,
+                keyboardType: TextInputType.emailAddress,
+                obscureText: true,
+                showEyeIcon: true,
+              ),
+              8.sbh,
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Forgot Password?', style: kSize12DarkW500Text.copyWith(color: MyColors.primary),)
+                  GestureDetector(
+                      onTap: () {
+                        Get.to(() => ForgotPasswordScreen());
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: kSize12DarkW500Text.copyWith(
+                            color: MyColors.primary),
+                      ))
                 ],
               ),
               40.sbh,
               Center(child: CustomButton(text: 'Login', onPressed: () {})),
               28.sbh,
-              Center(child: Text('Or sign up with social account', style: kSize12DarkW500Text,)),
+              Center(
+                  child: Text(
+                'Or sign up with social account',
+                style: kSize12DarkW500Text,
+              )),
               28.sbh,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -74,17 +110,20 @@ class LoginScreen extends StatelessWidget {
               ),
               28.sbh,
               Center(
-                child: RichText(text: TextSpan(
-                  text: 'Don\'t have an account? ',
-                  style: kSize12DarkW500Text.copyWith(color: MyColors.midnightBlue),
-                  children: [
-                    TextSpan(
-                      text: 'Sign up',
-                      style: kSize12DarkW500Text.copyWith(color: MyColors.primary),
-                      recognizer: TapGestureRecognizer()..onTap = () => Get.to(() => SignUpScreen()),
-                    )
-                  ]
-                )),
+                child: RichText(
+                    text: TextSpan(
+                        text: 'Don\'t have an account? ',
+                        style: kSize12DarkW500Text.copyWith(
+                            color: MyColors.midnightBlue),
+                        children: [
+                      TextSpan(
+                        text: 'Sign up',
+                        style: kSize12DarkW500Text.copyWith(
+                            color: MyColors.primary),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => Get.to(() => SignUpScreen()),
+                      )
+                    ])),
               )
             ],
           ),
