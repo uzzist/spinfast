@@ -9,6 +9,7 @@ import 'package:spinfast/utils/values/my_images.dart';
 import 'package:spinfast/utils/values/styles.dart';
 import 'package:spinfast/views/auth/forgot_password/forgot_password_screen.dart';
 import 'package:spinfast/views/auth/signup/signup_screen.dart';
+import 'package:spinfast/views/bottom_bar/bottom_bar_screen.dart';
 import 'package:spinfast/views/widgets/auth/social_login_button.dart';
 import 'package:spinfast/views/widgets/custom_button.dart';
 import 'package:spinfast/views/widgets/custom_textfield.dart';
@@ -92,7 +93,9 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               40.sbh,
-              Center(child: CustomButton(text: 'Login', onPressed: () {})),
+              Center(child: CustomButton(text: 'Login', onPressed: () {
+                Get.offAll(() => BottomBarScreen());
+              })),
               28.sbh,
               Center(
                   child: Text(

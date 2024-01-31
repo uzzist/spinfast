@@ -7,5 +7,9 @@ class MyImages {
   static const String google = 'assets/images/google.png';
   static const String facebook = 'assets/images/facebook.png';
   static const String tick_square = 'assets/images/tick_square.png';
+  static const String profile_picture = 'assets/images/profile_picture.png';
+  static const String qr_scanner = 'assets/images/qr_scanner.png';
+  static const String notification = 'assets/images/notification.png';
+  static const String filter = 'assets/images/filter.png';
 
 }
