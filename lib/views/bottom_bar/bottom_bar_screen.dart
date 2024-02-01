@@ -44,7 +44,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.search, ),
+                  icon: Icon(Icons.shopping_bag, ),
                   label: 'Orders',
                 ),
                 BottomNavigationBarItem(

@@ -11,5 +11,6 @@ class MyImages {
   static const String qr_scanner = 'assets/images/qr_scanner.png';
   static const String notification = 'assets/images/notification.png';
   static const String filter = 'assets/images/filter.png';
-
+  static const String laundry = 'assets/images/laundry.jpeg';
+  static const String laundromat = 'assets/images/laundromat.jpeg';
 }
