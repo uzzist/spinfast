@@ -13,4 +13,14 @@ class MyImages {
   static const String filter = 'assets/images/filter.png';
   static const String laundry = 'assets/images/laundry.jpeg';
   static const String laundromat = 'assets/images/laundromat.jpeg';
+  static const String check_icon = 'assets/images/check_icon.png';
+  static const String wash_icon = 'assets/images/wash_icon.png';
+  static const String user_icon = 'assets/images/user_icon.png';
+  static const String key_icon = 'assets/images/key_icon.png';
+  static const String address_icon = 'assets/images/address_icon.png';
+  static const String payment_icon = 'assets/images/payment_icon.png';
+  static const String privacy_icon = 'assets/images/privacy_icon.png';
+  static const String ask_questions_icon = 'assets/images/ask_questions_icon.png';
+  static const String support_icon = 'assets/images/support_icon.png';
+  static const String logout_icon = 'assets/images/logout_icon.png';
 }

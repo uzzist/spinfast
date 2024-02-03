@@ -16,21 +16,25 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        fixedSize: Size(width ?? 235.w, height ?? 42),
-        shape: RoundedRectangleBorder(
+    return InkWell(
+      onTap: onPressed,
+      splashColor: MyColors.dark,
+      child: Container(
+        height: height ?? 42.h,
+        width: width ?? 235.w,
+        decoration: BoxDecoration(
+            color: backgroundColor ?? MyColors.primary,
           borderRadius: BorderRadius.circular(borderRadius ?? 34.r)
         ),
-        backgroundColor: backgroundColor ?? MyColors.primary
+          child: Center(
+            child: Text(text, style: TextStyle(
+              color: MyColors.white,
+              fontSize: fontSize ?? 14.sp,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w700,
+            ),),
+          )
       ),
-        onPressed: onPressed,
-        child: Text(text, style: TextStyle(
-          color: MyColors.white,
-          fontSize: fontSize ?? 14.sp,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w700,
-        ),)
     );
   }
 }
