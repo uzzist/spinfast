@@ -133,28 +133,31 @@ class ProfileScreen extends StatelessWidget {
                                     Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          'Logout',
-                                          style: kSize14DarkW500Text.copyWith(
-                                              fontWeight: FontWeight.w700),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Logout',
+                                              style: kSize14DarkW500Text.copyWith(
+                                                  fontWeight: FontWeight.w700),
+                                            ),
+                                            Text(
+                                              'Are you sure you want to logout from the app?',
+                                              style: kSize12DarkW500Text.copyWith(
+                                                  color: MyColors.black.withOpacity(.2),
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          ],
                                         ),
                                         Spacer(),
-                                        IconButton(
-                                          padding: EdgeInsets.zero,
-                                          onPressed: () {
+                                        GestureDetector(
+                                          onTap: () {
                                             Get.back();
                                           },
-                                          icon: Icon(Icons.close),
-                                        ),
+                                            child: Icon(Icons.close)),
                                       ],
-                                    ),
-                                    4.sbh,
-                                    Text(
-                                      'Are you sure you want to logout from the app?',
-                                      style: kSize12DarkW500Text.copyWith(
-                                          color: MyColors.black.withOpacity(.2),
-                                          fontWeight: FontWeight.w400),
                                     ),
                                     32.sbh,
                                     Row(

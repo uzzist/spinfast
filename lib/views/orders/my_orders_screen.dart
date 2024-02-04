@@ -130,7 +130,21 @@ class MyOrdersScreen extends StatelessWidget {
                                 children: [
                                   Text('Cancel Booking', style: kSize12DarkW500Text.copyWith(color: MyColors.red, fontWeight: FontWeight.w600),),
                                   Spacer(),
-                                  CustomButton(text: 'View Details', onPressed: () {}, height: 26.h, width: 86.w, fontSize: 10.sp,)
+                                  GestureDetector(
+                                    onTap: (){},
+                                    child: Container(
+                                      height: 26.h,
+                                      width: 86.w,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(34.r),
+                                        color: MyColors.white,
+                                        border: Border.all(color: MyColors.primary)
+                                      ),
+                                      child: Center(
+                                        child: Text('View details', style: kSize12DarkW500Text.copyWith(fontSize: 10.sp, color: MyColors.primary),),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -202,7 +216,21 @@ class MyOrdersScreen extends StatelessWidget {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      CustomButton(text: 'Rebook', onPressed: () {}, height: 26.h, width: 86.w, fontSize: 10.sp,)
+                                      GestureDetector(
+                                        onTap: (){},
+                                        child: Container(
+                                          height: 26.h,
+                                          width: 86.w,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(34.r),
+                                              color: MyColors.white,
+                                              border: Border.all(color: MyColors.primary)
+                                          ),
+                                          child: Center(
+                                            child: Text('Rebook', style: kSize12DarkW500Text.copyWith(fontSize: 10.sp, color: MyColors.primary),),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -294,7 +322,21 @@ class MyOrdersScreen extends StatelessWidget {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      CustomButton(text: 'Rebook', onPressed: () {}, height: 26.h, width: 86.w, fontSize: 10.sp,)
+                                      GestureDetector(
+                                        onTap: (){},
+                                        child: Container(
+                                          height: 26.h,
+                                          width: 86.w,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(34.r),
+                                              color: MyColors.white,
+                                              border: Border.all(color: MyColors.primary)
+                                          ),
+                                          child: Center(
+                                            child: Text('Rebook', style: kSize12DarkW500Text.copyWith(fontSize: 10.sp, color: MyColors.primary),),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),

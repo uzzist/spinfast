@@ -16,24 +16,29 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      splashColor: MyColors.dark,
-      child: Container(
-        height: height ?? 42.h,
-        width: width ?? 235.w,
-        decoration: BoxDecoration(
-            color: backgroundColor ?? MyColors.primary,
-          borderRadius: BorderRadius.circular(borderRadius ?? 34.r)
+    return SizedBox(
+      height: height ?? 42.h,
+      width: width ?? 235.w,
+      child: TextButton(
+        onPressed: onPressed,
+        style: TextButton.styleFrom(
+          backgroundColor: backgroundColor ?? MyColors.primary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius ?? 34.r),
+          ),
+          splashFactory: InkRipple.splashFactory, // Optional splash effect
         ),
-          child: Center(
-            child: Text(text, style: TextStyle(
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
               color: MyColors.white,
               fontSize: fontSize ?? 14.sp,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w700,
-            ),),
-          )
+            ),
+          ),
+        ),
       ),
     );
   }
