@@ -23,4 +23,7 @@ class MyImages {
   static const String ask_questions_icon = 'assets/images/ask_questions_icon.png';
   static const String support_icon = 'assets/images/support_icon.png';
   static const String logout_icon = 'assets/images/logout_icon.png';
+  static const String mastercard_icon = 'assets/images/mastercard_icon.png';
+  static const String applepay_icon = 'assets/images/applepay_icon.png';
+  static const String empty_cart = 'assets/images/empty_cart.png';
 }

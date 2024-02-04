@@ -59,6 +59,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             12.sbh,
             Text('Email', style: kSize12DarkW500Text,),
+            8.sbh,
             CustomTextField(
                 length: 30,
                 keyboardType: TextInputType.emailAddress,

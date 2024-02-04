@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:spinfast/utils/extensions/extensions.dart';
 import 'package:spinfast/utils/values/my_images.dart';
 import 'package:spinfast/utils/values/styles.dart';
+import 'package:spinfast/views/home/laundromat_detail_screen.dart';
 import 'package:spinfast/views/home/location_screen.dart';
 import 'package:spinfast/views/home/notification_screen.dart';
 import 'package:spinfast/views/widgets/home/search_screen.dart';
@@ -111,20 +112,26 @@ class HomeScreen extends StatelessWidget {
                               color: MyColors.white,
                               boxShadow: [
                                 BoxShadow(
-                                    offset: Offset(0,4),
+                                    offset: Offset(0, 4),
                                     color: MyColors.black.withOpacity(.1),
                                     blurRadius: 12,
-                                    spreadRadius: 0
-                                ),
+                                    spreadRadius: 0),
                               ],
-                              borderRadius: BorderRadius.circular(8.r)
-                          ),
+                              borderRadius: BorderRadius.circular(8.r)),
                           child: Row(
                             children: [
                               16.sbw,
-                              Icon(Icons.search, color: MyColors.black.withOpacity(.2),),
+                              Icon(
+                                Icons.search,
+                                color: MyColors.black.withOpacity(.2),
+                              ),
                               8.sbw,
-                              Text('Shop name or service', style: kSize12DarkW500Text.copyWith(fontSize: 12.sp, color: MyColors.black.withOpacity(.2)),)
+                              Text(
+                                'Shop name or service',
+                                style: kSize12DarkW500Text.copyWith(
+                                    fontSize: 12.sp,
+                                    color: MyColors.black.withOpacity(.2)),
+                              )
                             ],
                           ),
                         ),
@@ -133,7 +140,7 @@ class HomeScreen extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           showModalBottomSheet(
-                            isScrollControlled: true,
+                              isScrollControlled: true,
                               context: context,
                               builder: (context) {
                                 return Container(
@@ -144,14 +151,30 @@ class HomeScreen extends StatelessWidget {
                                     children: [
                                       24.sbh,
                                       Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 16.w),
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 16.w),
                                         child: Row(
                                           children: [
-                                            Icon(Icons.close, color: MyColors.black, size: 14.h,),
+                                            Icon(
+                                              Icons.close,
+                                              color: MyColors.black,
+                                              size: 14.h,
+                                            ),
                                             4.sbw,
-                                            Text('Sort/Filters', style: kSize14DarkW500Text.copyWith(fontWeight: FontWeight.w600),),
+                                            Text(
+                                              'Sort/Filters',
+                                              style:
+                                                  kSize14DarkW500Text.copyWith(
+                                                      fontWeight:
+                                                          FontWeight.w600),
+                                            ),
                                             Spacer(),
-                                            Text('Clear all' ,style: kSize12DarkW500Text.copyWith(color: MyColors.primary),)
+                                            Text(
+                                              'Clear all',
+                                              style:
+                                                  kSize12DarkW500Text.copyWith(
+                                                      color: MyColors.primary),
+                                            )
                                           ],
                                         ),
                                       ),
@@ -159,12 +182,10 @@ class HomeScreen extends StatelessWidget {
                                       Expanded(
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            border: Border(
-                                              top: BorderSide(
-                                                color: MyColors.black.withOpacity(.2)
-                                              )
-                                            )
-                                          ),
+                                              border: Border(
+                                                  top: BorderSide(
+                                                      color: MyColors.black
+                                                          .withOpacity(.2)))),
                                           child: Row(
                                             children: [
                                               Column(
@@ -172,42 +193,86 @@ class HomeScreen extends StatelessWidget {
                                                   Expanded(
                                                     child: Container(
                                                       width: 117.w,
-                                                      color: MyColors.lightBlack,
+                                                      color:
+                                                          MyColors.lightBlack,
                                                       child: Column(
                                                         children: [
                                                           Container(
                                                             height: 56.h,
-                                                            width: double.infinity,
-                                                            color: MyColors.white,
+                                                            width:
+                                                                double.infinity,
+                                                            color:
+                                                                MyColors.white,
                                                             child: Center(
-                                                              child: Text('Sort', style: kSize12DarkW500Text.copyWith(fontWeight: FontWeight.w600),),
+                                                              child: Text(
+                                                                'Sort',
+                                                                style: kSize12DarkW500Text.copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600),
+                                                              ),
                                                             ),
                                                           ),
                                                           Container(
                                                             height: 56.h,
-                                                            width: double.infinity,
-                                                            color: MyColors.lightBlack,
+                                                            width:
+                                                                double.infinity,
+                                                            color: MyColors
+                                                                .lightBlack,
                                                             child: Center(
-                                                              child: Text('Others', style: kSize12DarkW500Text.copyWith(fontWeight: FontWeight.w600, color: MyColors.black.withOpacity(.2)),),
+                                                              child: Text(
+                                                                'Others',
+                                                                style: kSize12DarkW500Text.copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    color: MyColors
+                                                                        .black
+                                                                        .withOpacity(
+                                                                            .2)),
+                                                              ),
                                                             ),
                                                           ),
                                                           Container(
                                                             height: 56.h,
-                                                            width: double.infinity,
-                                                            color: MyColors.lightBlack,
+                                                            width:
+                                                                double.infinity,
+                                                            color: MyColors
+                                                                .lightBlack,
                                                             child: Center(
-                                                              child: Text('location', style: kSize12DarkW500Text.copyWith(fontWeight: FontWeight.w600, color: MyColors.black.withOpacity(.2)),),
+                                                              child: Text(
+                                                                'location',
+                                                                style: kSize12DarkW500Text.copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    color: MyColors
+                                                                        .black
+                                                                        .withOpacity(
+                                                                            .2)),
+                                                              ),
                                                             ),
                                                           ),
                                                           Container(
                                                             height: 56.h,
-                                                            width: double.infinity,
-                                                            color: MyColors.lightBlack,
+                                                            width:
+                                                                double.infinity,
+                                                            color: MyColors
+                                                                .lightBlack,
                                                             child: Center(
-                                                              child: Text('Timing', style: kSize12DarkW500Text.copyWith(fontWeight: FontWeight.w600, color: MyColors.black.withOpacity(.2)),),
+                                                              child: Text(
+                                                                'Timing',
+                                                                style: kSize12DarkW500Text.copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    color: MyColors
+                                                                        .black
+                                                                        .withOpacity(
+                                                                            .2)),
+                                                              ),
                                                             ),
                                                           ),
-                                                    
                                                         ],
                                                       ),
                                                     ),
@@ -216,45 +281,82 @@ class HomeScreen extends StatelessWidget {
                                               ),
                                               Expanded(
                                                   child: Container(
-                                                    color: MyColors.white,
-                                                    padding: EdgeInsets.only(top: 20.h, left: 16.w),
-                                                    child: Column(
-                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                color: MyColors.white,
+                                                padding: EdgeInsets.only(
+                                                    top: 20.h, left: 16.w),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Row(
                                                       children: [
-                                                        Row(
-                                                          children: [
-                                                            Image.asset(MyImages.check_icon, height: 16.h, width: 16.w,),
-                                                            4.sbw,
-                                                            Text('Popularity', style: kSize12DarkW500Text,)
-                                                          ],
+                                                        Image.asset(
+                                                          MyImages.check_icon,
+                                                          height: 16.h,
+                                                          width: 16.w,
                                                         ),
-                                                        30.sbh,
-                                                        Row(
-                                                          children: [
-                                                            Image.asset(MyImages.check_icon, height: 16.h, width: 16.w, color: MyColors.primary,),
-                                                            4.sbw,
-                                                            Text('Rating: High to Low', style: kSize12DarkW500Text.copyWith(color: MyColors.primary))
-                                                          ],
-                                                        ),
-                                                        30.sbh,
-                                                        Row(
-                                                          children: [
-                                                            Image.asset(MyImages.check_icon, height: 16.h, width: 16.w,),
-                                                            4.sbw,
-                                                            Text('Cost: High to Low', style: kSize12DarkW500Text,)
-                                                          ],
-                                                        ),
-                                                        30.sbh,
-                                                        Row(
-                                                          children: [
-                                                            Image.asset(MyImages.check_icon, height: 16.h, width: 16.w,),
-                                                            4.sbw,
-                                                            Text('Cost: Low to High', style: kSize12DarkW500Text,)
-                                                          ],
-                                                        ),
+                                                        4.sbw,
+                                                        Text(
+                                                          'Popularity',
+                                                          style:
+                                                              kSize12DarkW500Text,
+                                                        )
                                                       ],
                                                     ),
-                                                  ))
+                                                    30.sbh,
+                                                    Row(
+                                                      children: [
+                                                        Image.asset(
+                                                          MyImages.check_icon,
+                                                          height: 16.h,
+                                                          width: 16.w,
+                                                          color:
+                                                              MyColors.primary,
+                                                        ),
+                                                        4.sbw,
+                                                        Text(
+                                                            'Rating: High to Low',
+                                                            style: kSize12DarkW500Text
+                                                                .copyWith(
+                                                                    color: MyColors
+                                                                        .primary))
+                                                      ],
+                                                    ),
+                                                    30.sbh,
+                                                    Row(
+                                                      children: [
+                                                        Image.asset(
+                                                          MyImages.check_icon,
+                                                          height: 16.h,
+                                                          width: 16.w,
+                                                        ),
+                                                        4.sbw,
+                                                        Text(
+                                                          'Cost: High to Low',
+                                                          style:
+                                                              kSize12DarkW500Text,
+                                                        )
+                                                      ],
+                                                    ),
+                                                    30.sbh,
+                                                    Row(
+                                                      children: [
+                                                        Image.asset(
+                                                          MyImages.check_icon,
+                                                          height: 16.h,
+                                                          width: 16.w,
+                                                        ),
+                                                        4.sbw,
+                                                        Text(
+                                                          'Cost: Low to High',
+                                                          style:
+                                                              kSize12DarkW500Text,
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                              ))
                                             ],
                                           ),
                                         ),
@@ -271,17 +373,18 @@ class HomeScreen extends StatelessWidget {
                               color: MyColors.white,
                               boxShadow: [
                                 BoxShadow(
-                                    offset: Offset(0,4),
+                                    offset: Offset(0, 4),
                                     color: MyColors.black.withOpacity(.1),
                                     blurRadius: 12,
-                                    spreadRadius: 0
-                                ),
+                                    spreadRadius: 0),
                               ],
-                              borderRadius: BorderRadius.circular(8.r)
-                          ),
+                              borderRadius: BorderRadius.circular(8.r)),
                           padding: EdgeInsets.all(8),
                           child: Center(
-                            child: Image.asset(MyImages.filter, color: MyColors.black.withOpacity(.2),),
+                            child: Image.asset(
+                              MyImages.filter,
+                              color: MyColors.black.withOpacity(.2),
+                            ),
                           ),
                         ),
                       )
@@ -369,7 +472,12 @@ class HomeScreen extends StatelessWidget {
                                       mainAxisSpacing: 6.0,
                                       childAspectRatio: 0.8),
                               itemBuilder: (BuildContext context, int index) {
-                                return LaundromatWidget();
+                                return GestureDetector(
+                                  onTap: () {
+                                    Get.to(() => LaundromatDetailScreen());
+                                  },
+                                  child: LaundromatWidget(),
+                                );
                               },
                               itemCount:
                                   4, // You can change this to the actual number of items you have

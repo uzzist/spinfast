@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:spinfast/utils/extensions/extensions.dart';
 import 'package:spinfast/utils/values/styles.dart';
+import 'package:spinfast/views/profile/address/add_new_address_screen.dart';
 import 'package:spinfast/views/widgets/custom_appbar.dart';
 
 import '../../../utils/values/my_colors.dart';
@@ -173,7 +174,9 @@ class ManageAddressScreen extends StatelessWidget {
                   separatorBuilder: (context, index) => 8.sbh,
                   itemCount: 1),
               80.sbh,
-              Center(child: CustomButton(text: '+ Add new address', onPressed: (){})),
+              Center(child: CustomButton(text: '+ Add new address', onPressed: (){
+                Get.to(() => AddNewAddressScreen());
+              })),
             ],
           ),
         ),

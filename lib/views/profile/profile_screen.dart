@@ -9,6 +9,8 @@ import 'package:spinfast/views/auth/login/login_screen.dart';
 import 'package:spinfast/views/profile/address/manage_address_screen.dart';
 import 'package:spinfast/views/profile/change_password/change_profile_password_screen.dart';
 import 'package:spinfast/views/profile/edit_profile_screen.dart';
+import 'package:spinfast/views/profile/payment_method/payment_method_screen.dart';
+import 'package:spinfast/views/profile/privacy_policy_screen.dart';
 import 'package:spinfast/views/widgets/custom_appbar.dart';
 import 'package:spinfast/views/widgets/custom_button.dart';
 import 'package:spinfast/views/widgets/profile/profile_option_widget.dart';
@@ -84,7 +86,9 @@ class ProfileScreen extends StatelessWidget {
                       image: MyImages.address_icon),
                   8.sbh,
                   ProfileOptionWidget(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => PaymentMethodScreen());
+                      },
                       text: 'Payment method',
                       image: MyImages.payment_icon),
                   20.sbh,
@@ -95,7 +99,9 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   16.sbh,
                   ProfileOptionWidget(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => PrivacyPolicyScreen());
+                      },
                       text: 'Privacy policy',
                       image: MyImages.privacy_icon),
                   8.sbh,
