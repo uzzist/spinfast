@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           defaultTransition: Transition.rightToLeft,
           theme: ThemeData(
+            scaffoldBackgroundColor: MyColors.white,
             primaryColor: MyColors.primary,
             useMaterial3: true,
           ),
